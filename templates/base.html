@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 1950 US Stats </title>
+  </head>
+
+  <body>
+    {% set messages = get_flashed_messages() %}
+    {% for entry in messages %}
+        <h6> {{entry}} </h6><br>
+    {% endfor %}
+    <p> Find age groups that exist with these many males</p>
+    <form method = "POST" action = "/response">
+		lower bound <br>
+      <input type = "text" name = "lowerRange">
+	     upper boubd <br>
+	  <input type = "text" name = "upperRange">
+      <input type = "submit">
+    </form>
+  </body>
+</html>
